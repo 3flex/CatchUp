@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">app</string>
+    <string name="app_name">CatchUp</string>
+    <string name="title_activity_entry_point">EntryPointActivity</string>
 </resources>
