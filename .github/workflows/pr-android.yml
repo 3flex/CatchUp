@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: Cancel Workflow Action
         uses: styfle/cancel-workflow-action@0.6.0
+        with:
+          access_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Checkout the code
         uses: actions/checkout@v2
       - name: Build the app
