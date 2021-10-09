@@ -1,16 +1,22 @@
-name: Build
+name: Lint
 on:
   pull_request:
     branches: [ main ]
 jobs:
-  build:
+  ktlint:
+    name: KtLint
     runs-on: ubuntu-latest
+
     steps:
       - name: Cancel Workflow Action
         uses: styfle/cancel-workflow-action@0.6.0
         with:
           access_token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Checkout the code
+      - name: Clone repo
         uses: actions/checkout@v2
-      - name: Build the app
-        run: ./gradlew build
+      - name: ktlint
+        uses: ScaCap/action-ktlint@master
+        with:
+          level: warning
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review # Change reporter
