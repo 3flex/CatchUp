@@ -28,7 +28,7 @@ class EntryPointActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hello $name!");
+    Text(text = "Hello $name!")
 }
 
 @Preview(showBackground = true)
