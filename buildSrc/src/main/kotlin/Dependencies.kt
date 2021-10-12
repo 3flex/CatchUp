@@ -12,11 +12,16 @@ object Versions {
     const val navCompose = "2.4.0-alpha10"
     const val accompanist = "0.19.0"
     const val coilCompose = "1.4.0"
+
+    // Detekt
+    const val detekt = "1.18.1"
 }
 
 object Dependencies {
     object Gradle {
         const val kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
+
+        const val detekt = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:${Versions.detekt}"
     }
 
     object Android {
@@ -31,6 +36,7 @@ object Dependencies {
         const val navigation = "androidx.navigation:navigation-compose:${Versions.navCompose}"
         const val jUnit = "androidx.compose.ui:ui-test-junit4:${Versions.compose}"
         const val coilCompose = "io.coil-kt:coil-compose:${Versions.coilCompose}"
-        const val accompanistNavigationAnimation =  "com.google.accompanist:accompanist-navigation-animation:${Versions.accompanist}"
+        const val accompanistNavigationAnimation =
+            "com.google.accompanist:accompanist-navigation-animation:${Versions.accompanist}"
     }
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>MagicNumber:Color.kt$0xFF03DAC5</ID>
+    <ID>MagicNumber:Color.kt$0xFF3700B3</ID>
+    <ID>MagicNumber:Color.kt$0xFF6200EE</ID>
+    <ID>MagicNumber:Color.kt$0xFFBB86FC</ID>
+    <ID>NewLineAtEndOfFile:Color.kt$com.catchup.app.ui.theme.Color.kt</ID>
+    <ID>NewLineAtEndOfFile:EntryPointActivity.kt$com.catchup.app.EntryPointActivity.kt</ID>
+    <ID>NewLineAtEndOfFile:Shape.kt$com.catchup.app.ui.theme.Shape.kt</ID>
+    <ID>NewLineAtEndOfFile:Theme.kt$com.catchup.app.ui.theme.Theme.kt</ID>
+    <ID>NewLineAtEndOfFile:Type.kt$com.catchup.app.ui.theme.Type.kt</ID>
+  </CurrentIssues>
+</SmellBaseline>

@@ -1,8 +1,9 @@
-import Versions.compose
+import io.gitlab.arturbosch.detekt.Detekt
 
 plugins {
     id("com.android.application")
     kotlin("android")
+    id("io.gitlab.arturbosch.detekt")
 }
 
 android {
@@ -51,6 +52,25 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+}
+
+detekt {
+    source = files("src/main/kotlin", "src/test/kotlin", "src/androidTest/kotlin")
+    buildUponDefaultConfig = true // preconfigure defaults
+    allRules = false // activate all available (even unstable) rules.
+    baseline = file("./detekt-baseline.yml")
+    ignoreFailures = false
+    config =
+        files("$rootDir/detekt-config.yml") // point to your custom config defining rules to run, overwriting default behavior
+
+    reports {
+        xml.enabled = true // checkstyle like format mainly for integrations like Jenkins
+    }
+}
+
+tasks.withType<Detekt>().configureEach {
+    // Target version of the generated JVM bytecode. It is used for type resolution.
+    jvmTarget = "1.8"
 }
 
 dependencies {
