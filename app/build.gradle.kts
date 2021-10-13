@@ -58,7 +58,7 @@ detekt {
     source = files("src/main/kotlin", "src/test/kotlin", "src/androidTest/kotlin")
     buildUponDefaultConfig = true // preconfigure defaults
     allRules = false // activate all available (even unstable) rules.
-    baseline = file("./detekt-baseline.yml")
+    // baseline = file("./detekt-baseline.yml")
     ignoreFailures = false
     config =
         files("$rootDir/detekt-config.yml") // point to your custom config defining rules to run, overwriting default behavior

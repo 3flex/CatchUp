@@ -1,3 +1,4 @@
+@file:Suppress("MagicNumber")  // Need this since I need to define constants
 package com.catchup.app.ui.theme
 
 import androidx.compose.ui.graphics.Color
